@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Search Dog</title>
+<style>
+	
+	#fid{
+	background: ghostwhite;
+	text-align : center;
+	border: 2px solid black;
+	margin-top: 50px;
+	opacity: 0.8;
+	padding-top: 50px;
+	padding-bottom: 50px;	
+	}
+	
+		a {
+	font-size:25px;
+	font-family:verdana;
+	}
+
+</style>
+</head>
+<body background="/dogg2.jpg" style="-webkit-background-size: cover">
+
+	<form action="/searchdogs"  method="GET" id="fid">
+		Search : <input type = "text" name="search" required/><br><br>
+		
+		Search by : <select name="searchBy">
+						<option value="entry_No">By Number</option>
+						<option value="name">By Name</option>
+						<option value="ownerName">By owner</option>
+						<option value="breed">By Breed</option>
+						<option value="groups">By Group</option>
+					</select>
+					<br><br>
+		<button type="submit">Submit</button>
+	</form>
+	<a href = "/">Home</a>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Security</title>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/mycss.css"
+th:href="@{/css/mycss.css}">
+</head>
+<style>
+	#dogs{
+		text-align: center;
+    	border: 5px solid;
+    	width: 500px;
+    	height: 500px;
+    	margin-left: 500px;
+    	background: ghostwhite;
+    	opacity: 0.8;
+    	font-size:25px;
+    	font-family:verdana;
+	}
+</style>
+</head>
+<body background="/dogg.jpg" style="-webkit-background-size: cover">
+<body>
+
+<div id=dogs>
+<h1>Login Page</h1>
+<div th:if="${param.error}" class="alert">
+	Invalid Username & Password
+</div>
+
+<div th:if="${param.logout}" class="alert">
+You have logged out successfully
+</div>
+
+<form  th:action="@{/Handler}" method="get">
+Username: <input type="text" id="username" name="username" autofocus="autofocus" placeholder="Username"/>
+<br>
+Password: <input type="password"
+				 id ="password"
+				 name="password"
+				 placeholder="placeholder"/>
+				 <br>
+				<input type="submit" name="login-submit" id="login-submit" value="Log In"/>
+				</form><br><br>
+				
+				To access the root directory click
+<a href="/" th:href="@{/}">Here</a>
+</div>
+<br>
+</body>
+</html>

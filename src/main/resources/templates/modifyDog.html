@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Modify dogs</title>
+<style>
+#mod{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background: ghostwhite;
+	text-align : center;
+	border: 2px solid black;
+	margin-top: 50px;
+	opacity: 0.8;
+}
+
+</style>
+</head>
+<body background="/dogg2.jpg" style="-webkit-background-size: cover">
+	<form action="/modify" id="mod">
+			ID: <input type="text" name="id" th:value="${doggylist.id}" readonly/><br><br>
+			Name : <input type = "text" name="name" th:value="${doggylist.name}"/><br><br>
+			Owner Name : <input type = "text" name="ownerName" th:value="${doggylist.ownerName}"/><br><br>
+			Breed : <input type = "text" name="breed" th:value="${doggylist.breed}"/><br><br>
+			Group : <select name="group">
+						<option value="sporting_Dog">Sporting Dog</option>
+						<option value="hound">Hound</option>
+						<option value="working_Dog">Working Dog</option>
+						<option value="terriers">Terriers</option>
+						<option value="toys">Toys</option>
+						<option value="non_sporting">Non-Sporting</option>
+						<option value="herding">Herding</option>
+					</select>
+					<br><br>
+			Gender : <input type="radio" name="gender" value="male" required>Male
+  					 <input type="radio" name="gender" value="female">Female<br>
+  					 <br>
+ 		    Ranking : <input type="radio" name="ranking" value="class" required>Class
+  					  <input type="radio" name="ranking" value="specialty">Specialty<br>
+  					  <br>
+  			Owner Email : <input type = "email" name="email" th:value="${doggylist.email}"/><br><br>
+  			  
+			<button type="submit">Update</button>
+	</form>
+	<a href = "viewDog.html" th:href="@{/viewdogs}" style="margin-left: 600px;">View Dogs</a>
+</body>
+</html>

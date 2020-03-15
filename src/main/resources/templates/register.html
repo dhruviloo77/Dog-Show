@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Register</title>
+</head>
+<style>
+	#dogs{
+		text-align: center;
+    	border: 5px solid;
+    	width: 500px;
+    	height: 500px;
+    	margin-left: 500px;
+    	background: ghostwhite;
+    	opacity: 0.8;
+    	font-size:25px;
+    	font-family:verdana;
+    	object-fit:cover;
+	}
+	
+	.fit{
+	max-width:99%;
+	
+	heigth:auto;
+	}
+</style>
+</head>
+<body class="fit" background="/dogy.jpg" style="-webkit-background-size: cover">
+<body>
+<div id=dogs>
+<h1>Handler Registration</h1>
+<form action="#" th:action="@{/register}" method="post">
+
+Name: <input type="text" name="name"><br>
+
+Password: <input type="password" name="password"> <br>
+<input type="submit" value="Add Handler" >
+
+<br>
+
+<a href = "/">Home</a><br>
+
+</form>
+</div>
+</body>
+</html>

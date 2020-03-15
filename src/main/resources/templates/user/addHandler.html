@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Dogs Handler</title>
+
+<style>
+	#dogs{
+		text-align: center;
+    	border: 5px solid;
+    	width: 500px;
+    	height: 630px;
+    	margin-left: 500px;
+    	background: ghostwhite;
+    	opacity: 0.8;
+	}
+</style>
+</head>
+<body background="/GS.jpg" style="-webkit-background-size: cover">
+	<div id="dogs">
+	<h1>Handler Page</h1>
+	<h3>Add Dogs</h3>
+		<form action="/addHandler" method="GET">
+			Name : <input type = "text" name="name" required/><br><br>
+			Owner Name : <input type = "text" name="ownerName" required/><br><br>
+			Breed : <input type = "text" name="breed" required/><br><br>
+			Group : <select name="group">
+						<option value="sporting_Dog">Sporting Dog</option>
+						<option value="hound">Hound</option>
+						<option value="working_Dog">Working Dog</option>
+						<option value="terriers">Terriers</option>
+						<option value="toys">Toys</option>
+						<option value="non_sporting">Non-Sporting</option>
+						<option value="herding">Herding</option>
+					</select>
+					<br><br>
+			Gender : <input type="radio" name="gender" value="male">Male
+  					 <input type="radio" name="gender" value="female">Female<br>
+  					 <br>
+ 		    Ranking : <input type="radio" name="ranking" value="class">Class
+  					  <input type="radio" name="ranking" value="specialty">Specialty<br>
+  					  <br>
+  					  
+  			Owner Email : <input type="email" name="email" required /><br>
+  						  <br>
+  					  
+			<button type="submit">Submit</button>
+
+		</form>
+		
+		<form action="#" th:action="@{/logout}" method="post">
+
+				<input type="submit" value="Logout" />
+
+			</form>
+		<br>
+			<a href = "viewHandler.html" th:href="@{/viewHandler}">View Dogs</a>
+			<br>
+			<a href = "searchDogList">Search Dogs</a>
+			<br>
+			<a href ="/user">Dog Handler</a>
+	</div>
+</body>
+</html>

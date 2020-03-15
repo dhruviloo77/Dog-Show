@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Dogs</title>
+
+<style>
+	#dogs{
+		text-align: center;
+    	border: 5px solid;
+    	width: 500px;
+    	height: 500px;
+    	margin-left: 500px;
+    	background: ghostwhite;
+    	opacity: 0.8;
+	}
+	
+	h1 { 
+		font-family:verdana;
+		font-size:30px;
+		
+	}
+	
+		a {
+	font-size:25px;
+	font-family:verdana;
+	}
+</style>
+</head>
+<body background="/Dog.jpg" style="-webkit-background-size: cover">
+	<div id="dogs">
+	<h1>The Great Toronto Dog Show</h1>
+	<h2>Tuesday Sep 17, 2019 <br>
+		Doors: 6:00 PM		<br>
+		All Ages			<br>
+		General Admission :	$18.50</h2>
+		
+		<h3>Sneaky Dee's Concert Venue
+			431 College St. <br>
+			Toronto, ON</h3>
+		
+		<br>
+		
+			<a href = "addDog.html" th:href="@{/adddogs}">Add Dogs</a>
+			<br>
+			<a href = "viewDog.html" th:href="@{/viewdogs}">View Dogs</a>
+			<br>
+			<a href = "searchDogList">Search Dogs</a>
+			<br>
+			<a href = "register.html" th:href="@{/register}">Add Dog Handler</a>
+			<br>
+			<a href ="/user">Dog Handler Login</a>
+	</div>
+</body>
+</html>

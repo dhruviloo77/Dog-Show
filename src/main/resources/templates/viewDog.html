@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+
+#table,th,tr,td{
+	margin-left: 350px;
+	background: ghostwhite;
+	text-align : center;
+	border: 2px solid black;
+	margin-top: 50px;
+	opacity: 0.8;
+}
+
+	a {
+	font-size:25px;
+	font-family:verdana;
+	}
+
+</style>
+<meta charset="ISO-8859-1">
+<title>View Dog</title>
+</head>
+<body background="/dogg2.jpg" style="-webkit-background-size: cover">
+   <table id="table">
+   <tr>
+   <th>Id</th>
+   <th>name</th>
+   <th>ownerName</th>
+   <th>breed</th>
+   <th>group</th>
+   <th>gender</th>
+   <th>ranking</th>
+   <th>Email</th>
+   
+   </tr>
+   
+   <tr th:each="dogs : ${doggylist}">
+     <td th:text="${dogs.id}"></td>
+     <td th:text="${dogs.name}"></td>
+     <td th:text="${dogs.ownerName}"></td>
+     <td th:text="${dogs.breed}"></td>
+     <td th:text="${dogs.groups}"></td>
+     <td th:text="${dogs.gender}"></td>
+     <td th:text="${dogs.ranking}"></td>
+      <td th:text="${dogs.email}"></td>
+       <td><a href="" th:href="@{/editlink/{id}(id=${dogs.id})}">EDIT</a></td>
+	<td><a href="" th:href="@{/deletelink/{id}(id=${dogs.id})}">DELETE</a></td>
+  
+   </tr>
+    </table>
+    	<a href="Home.html" th:href="@{/}" style="margin-left: 600px;">Home</a>
+</body>
+</html>
